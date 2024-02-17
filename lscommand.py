@@ -5,6 +5,9 @@ from os import listdir
 from os.path import isfile, join
 from pathlib import Path
 from rich.style import Style
+import logging, time
+
+logging.basicConfig(filemode="a",filename="log.txt",level=logging.DEBUG)
 
 cursor_id = 0
 
@@ -22,6 +25,24 @@ directory = os.getcwd()
 onlyfiles = []
 onlydirs = []
 
+def get_folder_size(folder_path):
+    metadata = []
+
+    for root, dirs, files in os.walk(folder_path):
+        for name in files + dirs:
+            full_path = os.path.join(root, name)
+            stat_info = os.stat(full_path)
+
+            metadata.append({
+                'name': name,
+                'path': full_path,
+                'size': stat_info.st_size,
+                'created_at': time.ctime(stat_info.st_ctime),
+                'modified_at': time.ctime(stat_info.st_mtime),
+                'accessed_at': time.ctime(stat_info.st_atime),
+            })
+    return metadata
+
 def get_stuff_from_dir(path):
     global onlyfiles, onlydirs
     onlyfiles = [f for f in listdir(directory) if isfile(join(path, f))]
@@ -31,7 +52,7 @@ def get_stuff_from_dir(path):
 get_stuff_from_dir(directory)
 
 def print_Table(files_dirs):
-    global directory, a2
+    global directory
     table = Table()
     
     table.add_column("Perms", style="")
@@ -40,7 +61,7 @@ def print_Table(files_dirs):
     table.add_column("File name", style="bold green")
     table.add_column("Real Type", style="")
     
-    table.add_row("", "", "", ".", "")
+    table.add_row("", "", "", "..", "")
 
     for i in files_dirs:
         # get onwer
@@ -51,9 +72,13 @@ def print_Table(files_dirs):
         file_stat = os.stat(directory + "/" + i)
         status = stat.filemode(file_stat.st_mode)
 
-        if os.path.isdir(i):
-            sum_ = sum(file.stat().st_size for file in Path(i).rglob('*'))
-            table.add_row(status, onwer, str(sum_), i, "folder")
+        if os.path.isdir(directory + "/" + i):
+            try:
+                nbytes = sum(d.stat().st_size for d in os.scandir(directory+"/"+i) if d.is_file())
+                nbytes = convert_size(nbytes)                
+            except:
+                nbytes = "permission denied"
+            table.add_row(status,onwer, str(nbytes), i , "folder")
 
         else:
             # get file size
@@ -79,9 +104,8 @@ with console.screen():
         try:
             global table1, cursor_id
             if key.char == "a":
-                print(onlydirs[cursor_id])
                 
-                console.clear()
+                console.clear() 
                 if cursor_id > len(table1.rows)-1:
                     cursor_id = 0
                 elif cursor_id > 0:
@@ -97,15 +121,13 @@ with console.screen():
         except:
             if str(key) == "Key.enter":
                 if cursor_id == 1:
-                    #console.clear()
-                    print(directory)
+                    console.clear()
                     directory = "/".join(directory.split("/")[:-1])
-                    print(directory)
+                    directory = os.path.split(directory)[0] + "/"
                     get_stuff_from_dir(directory)
-
                     table1 = print_Table(onlydirs)
                     console.print(table1)
-                    
+                                      
                     cursor_id = 0
 
                 elif os.path.isdir(directory + "/" + onlydirs[cursor_id-2]):

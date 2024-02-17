@@ -1,0 +1,77 @@
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/python/file_manager/lscommand.py", line 124, in on_key_press
+    get_stuff_from_dir(directory)
+  File "/home/yulai/python/file_manager/lscommand.py", line 48, in get_stuff_from_dir
+    onlyfiles = [f for f in listdir(directory) if isfile(join(path, f))]
+                            ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/python/file_manager/lscommand.py", line 124, in on_key_press
+    directory = os.path.split(directory) + "/"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+TypeError: can only concatenate tuple (not "str") to tuple
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/python/file_manager/lscommand.py", line 126, in on_key_press
+    table1 = print_Table(onlydirs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/python/file_manager/lscommand.py", line 77, in print_Table
+    nbytes = sum(d.stat().st_size for d in os.scandir(directory+"/"+i) if d.is_file())
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '///root'
