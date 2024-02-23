@@ -21,7 +21,7 @@ def convert_size(size_bytes):
    return "%s %s" % (s, size_name[i])
 
 console = Console()
-directory = os.getcwd()
+directory = os.getcwd()+"/"
 onlyfiles = []
 onlydirs = []
 
@@ -130,10 +130,11 @@ with console.screen():
                                       
                     cursor_id = 0
 
-                elif os.path.isdir(directory + "/" + onlydirs[cursor_id-2]):
+                elif os.path.isdir(directory + onlydirs[cursor_id-2]):
                     
                     console.clear()
-                    directory = directory + "/" + onlydirs[cursor_id-2]
+                    logging.info(directory)
+                    directory = directory + onlydirs[cursor_id-2] + "/"
                     
                     get_stuff_from_dir(directory)
                     table1 = print_Table(onlydirs)
@@ -141,6 +142,10 @@ with console.screen():
                     
                     cursor_id = 0
 
+                elif os.path.isfile(directory+onlydirs[cursor_id-2]):
+                    with open(directory+onlydirs[cursor_id-2],"r") as file:
+                        for i in range(5):
+                           console.print(file.readline())
                 else: pass
 
     def background_task():
