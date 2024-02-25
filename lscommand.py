@@ -160,10 +160,10 @@ with console.screen():
                     cursor_id = 0
 
                 # like cat file_name
-                elif os.path.isfile(directory + "/" + dir_entries[cursor_id-2]):
-                    with open(directory + "/" + dir_entries[cursor_id-2],"r") as file:
-                        for i in range(5):
-                           console.print(file.readline())
+                #elif os.path.isfile(directory + "/" + dir_entries[cursor_id-2]):
+                    #with open(directory + "/" + dir_entries[cursor_id-2],"r") as file:
+                        #for i in range(5):
+                           #console.print(file.readline())
             
             # move cursor down
             elif str(key) == "Key.down" and cursor_id <= len(dir_entries):
