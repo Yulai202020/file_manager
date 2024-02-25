@@ -1,0 +1,541 @@
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 106, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 145, in on_key_press
+    elif str(key) == "Key.down" and cursor_id <= len(dir_entries):
+                                    ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'cursor_id' where it is not associated with a value
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 143, in on_key_press
+    elif str(key) == "Key.down" and cursor_id <= len(dir_entries):
+                                    ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'cursor_id' where it is not associated with a value
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 144, in on_key_press
+    elif str(key) == "Key.down" and cursor_id <= len(dir_entries):
+                                    ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'cursor_id' where it is not associated with a value
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 146, in on_key_press
+    if cursor_id > len(table_entry.rows)-1:
+                       ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'table_entry' where it is not associated with a value
+INFO:root:6
+INFO:root:5
+INFO:root:4
+INFO:root:3
+INFO:root:2
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 123, in on_key_press
+    elif os.path.isdir(directory + dir_entries[cursor_id-2]):
+                                   ~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: list index out of range
+INFO:root:2
+INFO:root:6
+INFO:root:5
+INFO:root:4
+INFO:root:3
+INFO:root:2
+INFO:root:2
+INFO:root:5
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 109, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 76, in print_Table
+    tmp = magic.from_file(directory + "/" + i, mime=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/magic/__init__.py", line 179, in from_file
+    return m.from_file(filename)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/magic/__init__.py", line 112, in from_file
+    with _real_open(filename):
+         ^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '//dev//core'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 136, in on_key_press
+    table_entry = print_Table(dir_entries)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 79, in print_Table
+    loggging.info(directory)
+    ^^^^^^^^
+NameError: name 'loggging' is not defined. Did you mean: 'logging'?
+INFO:root:2
+INFO:root://dev/
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:log.txt
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:.gitignore
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:.gitignore
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:.gitignore
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:.git
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:.git
+INFO:root:/home/yulai/projects/python/file_manager/.git
+INFO:root:COMMIT_EDITMSG
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 125, in on_key_press
+    dir_splited = path.split(directory)
+                  ^^^^
+NameError: name 'path' is not defined. Did you mean: 'Path'?
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 126, in on_key_press
+    dir_splited.pop()
+    ^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'pop'
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 125, in on_key_press
+    dir_splited = Path.split(directory)
+                  ^^^^^^^^^^
+AttributeError: type object 'Path' has no attribute 'split'
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+INFO:root:['.git', 'log.txt', '.gitignore', '.py', 'lscommand.py']
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 127, in on_key_press
+    dir_splited.pop()
+    ^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'pop'
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+INFO:root:['/home/yulai/projects/python', 'file_manager']
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 127, in on_key_press
+    dir_splited.pop()
+    ^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'pop'
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+INFO:root:['/home/yulai/projects/python/file_manager', '']
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 127, in on_key_press
+    dir_splited.pop()
+    ^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'pop'
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+INFO:root:['/home/yulai/projects/python/file_manager', '']
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 127, in on_key_press
+    dir_splited.pop()
+    ^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'pop'
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 129, in on_key_press
+    directory = os.path.join(dir_splited)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 76, in join
+TypeError: expected str, bytes or os.PathLike object, not list
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+INFO:root:/home/yulai/projects/python
+INFO:root:123.py
+INFO:root:/home/yulai/projects
+INFO:root:learn_math
+INFO:root:/home/yulai
+INFO:root:arch.qcow2
+INFO:root:/home
+INFO:root:yulai
+INFO:root:/
+INFO:root:srv
+INFO:root:/
+INFO:root:srv
+INFO:root:/
+INFO:root:dev
+INFO:root://dev
+INFO:root:core
+INFO:root://
+INFO:root:sbin
+INFO:root:///sbin
+INFO:root:db5.3
+INFO:root:///sbin/db5.3
+INFO:root:db_upgrade
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 156, in on_key_press
+    console.print(file.readline())
+                  ^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd8 in position 96: invalid continuation byte
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+INFO:root:/home/yulai/projects/python/file_manager
+INFO:root:lscommand.py
+INFO:root:home/yulai/projects/python
+INFO:root:home/yulai/projects/python
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 113, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 120, in on_key_press
+    logging.info(dir_entries[cursor_id-2])
+                 ~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: list index out of range
+INFO:root:home/yulai/projects/python
+INFO:root:home/yulai/projects
+INFO:root:home/yulai/projects/python
+INFO:root:[]
+INFO:root:home/yulai/projects
+INFO:root:[]
+INFO:root:['.git', 'log.txt', '.gitignore', '.py', 'lscommand.py']
+INFO:root:home/yulai/projects/python
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 114, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 131, in on_key_press
+    dir_entries = get_entries(directory)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 37, in get_entries
+    get_folders = [i for i in all_items if os.path.isdir(os.path.join(path, i))]
+                              ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'all_items' where it is not associated with a value
+INFO:root:['.git', 'log.txt', '.gitignore', '.py', 'lscommand.py']
+INFO:root:home/yulai/projects/python
+INFO:root:[]
+INFO:root:['.git', 'log.txt', '.gitignore', '.py', 'lscommand.py']
+INFO:root:/home/yulai/projects/python
+INFO:root:['richgame.py', 'richgame2.py', '12.py', 'smth', '123.py', 'a', 'file_manager']
+INFO:root:['smth', 'a', 'file_manager', 'richgame.py', 'richgame2.py', '12.py', '123.py']
+INFO:root:/home/yulai/projects
+INFO:root:['python', 'learn_math']
+INFO:root:['python', 'learn_math']
+INFO:root:/home/yulai
+INFO:root:['.bash_logout', '.bash_profile', '.bashrc', 'config-dotfiles', '.config', '.gitconfig', '.vimrc', '.vim', '.cache', 'bin', '.pyenv', '.profile', '.Xauthority', '.local', '.pki', 'passwords.txt', '.lesshst', '.Xresources', 'Downloads', '.fehbg', '.xinitrc', 'Documents', 'Music', '.java', '.steam', '.pulse-cookie', 'Public', 'Videos', '.bash_history', '.wine', '.steampath', '.steampid', '.viminfo', 'zoom', '.zoom', 'archlinux-2024.02.10-x86_64.iso', 'MS-DOS 6.22.iso', '.python_history', 'Desktop', 'Pictures', 'projects', '.vscode', '.ssh', 'Yulai202020', 'arch.qcow2', 'Templates']
+INFO:root:['config-dotfiles', '.config', '.vim', '.cache', 'bin', '.pyenv', '.local', '.pki', 'Downloads', 'Documents', 'Music', '.java', '.steam', 'Public', 'Videos', '.wine', 'zoom', '.zoom', 'Desktop', 'Pictures', 'projects', '.vscode', '.ssh', 'Yulai202020', 'Templates', '.bash_logout', '.bash_profile', '.bashrc', '.gitconfig', '.vimrc', '.profile', '.Xauthority', 'passwords.txt', '.lesshst', '.Xresources', '.fehbg', '.xinitrc', '.pulse-cookie', '.bash_history', '.steampid', '.viminfo', 'archlinux-2024.02.10-x86_64.iso', 'MS-DOS 6.22.iso', '.python_history', 'arch.qcow2']
+INFO:root:/home
+INFO:root:['yulai']
+INFO:root:['yulai']
+INFO:root:/
+INFO:root:['boot', 'var', 'dev', 'run', 'etc', 'tmp', 'sys', 'proc', 'usr', 'bin', 'home', 'lib', 'lib64', 'mnt', 'opt', 'root', 'sbin', 'srv']
+INFO:root:['boot', 'var', 'dev', 'run', 'etc', 'tmp', 'sys', 'proc', 'usr', 'bin', 'home', 'lib', 'lib64', 'mnt', 'opt', 'root', 'sbin', 'srv']
+INFO:root:['vga_arbiter', 'mem', 'null', 'port', 'zero', 'full', 'random', 'urandom', 'kmsg', 'tty', 'console', 'tty0', 'vcs', 'vcsu', 'vcsa', 'vcs1', 'vcsu1', 'vcsa1', 'tty1', 'tty2', 'tty3', 'tty4', 'tty5', 'tty6', 'tty7', 'tty8', 'tty9', 'tty10', 'tty11', 'tty12', 'tty13', 'tty14', 'tty15', 'tty16', 'tty17', 'tty18', 'tty19', 'tty20', 'tty21', 'tty22', 'tty23', 'tty24', 'tty25', 'tty26', 'tty27', 'tty28', 'tty29', 'tty30', 'tty31', 'tty32', 'tty33', 'tty34', 'tty35', 'tty36', 'tty37', 'tty38', 'tty39', 'tty40', 'tty41', 'tty42', 'tty43', 'tty44', 'tty45', 'tty46', 'tty47', 'tty48', 'tty49', 'tty50', 'tty51', 'tty52', 'tty53', 'tty54', 'tty55', 'tty56', 'tty57', 'tty58', 'tty59', 'tty60', 'tty61', 'tty62', 'tty63', 'hwrng', 'cpu', 'snapshot', 'userfaultfd', 'autofs', 'gpiochip0', 'ptmx', 'ttyS0', 'ttyS1', 'ttyS2', 'ttyS3', 'ttyS4', 'ttyS5', 'ttyS6', 'ttyS7', 'ttyS8', 'ttyS9', 'ttyS10', 'ttyS11', 'ttyS12', 'ttyS13', 'ttyS14', 'ttyS15', 'ttyS16', 'ttyS17', 'ttyS18', 'ttyS19', 'ttyS20', 'ttyS21', 'ttyS22', 'ttyS23', 'ttyS24', 'ttyS25', 'ttyS26', 'ttyS27', 'ttyS28', 'ttyS29', 'ttyS30', 'ttyS31', 'hpet', 'nvram', 'tpm0', 'tpmrm0', 'dma_heap', 'udmabuf', 'input', 'rtc0', 'cpu_dma_latency', 'core', 'fd', 'stdin', 'stdout', 'stderr', 'char', 'bus', 'nvme0', 'nvme0n1', 'nvme0n1p1', 'nvme0n1p2', 'ng0n1', 'disk', 'block', 'kfd', 'dri', 'drm_dp_aux0', 'fb0', 'shm', 'pts', 'log', 'hugepages', 'mqueue', 'mapper', 'fuse', 'loop-control', 'cuse', 'btrfs-control', 'net', 'ppp', 'uinput', 'uhid', 'vfio', 'userio', 'vhci', 'vhost-net', 'vhost-vsock', 'snd', 'rfkill', 'watchdog', 'watchdog0', 'rtc', 'video0', 'video1', 'media0', 'psaux', 'v4l', 'kvm', 'vcs2', 'vcsu2', 'vcsa2', 'vcs3', 'gpmctl', 'vcsu3', 'vcsa3', 'vcs4', 'vcsu4', 'vcsa4', 'vcs5', 'vcsu5', 'vcsa5', 'vcs6', 'vcsu6', 'vcsa6']
+INFO:root:/
+INFO:root:['boot', 'var', 'dev', 'run', 'etc', 'tmp', 'sys', 'proc', 'usr', 'bin', 'home', 'lib', 'lib64', 'mnt', 'opt', 'root', 'sbin', 'srv']
+INFO:root:['boot', 'var', 'dev', 'run', 'etc', 'tmp', 'sys', 'proc', 'usr', 'bin', 'home', 'lib', 'lib64', 'mnt', 'opt', 'root', 'sbin', 'srv']
