@@ -1,12 +1,16 @@
 from rich.console import Console
 from rich.table import Table
-import os, stat, magic, math
-from os.path import isfile, join
-from pathlib import Path
 from rich.style import Style
-import logging, time
+
+from pathlib import Path
+
 from pynput import keyboard
-logging.basicConfig(filemode="a",filename="log.txt",level=logging.DEBUG)
+
+from os.path import isfile, join
+
+import os, stat, magic, math, logging
+
+logging.basicConfig(filemode="a", filename="log.txt",l evel=logging.DEBUG)
 
 cursor_id = 0
 
@@ -22,24 +26,6 @@ def convert_size(size_bytes):
 console = Console()
 directory = os.getcwd()+"/"
 dir_entries = []
-
-def get_folder_size(folder_path):
-    metadata = []
-
-    for root, dirs, files in os.walk(folder_path):
-        for name in files + dirs:
-            full_path = os.path.join(root, name)
-            stat_info = os.stat(full_path)
-
-            metadata.append({
-                'name': name,
-                'path': full_path,
-                'size': stat_info.st_size,
-                'created_at': time.ctime(stat_info.st_ctime),
-                'modified_at': time.ctime(stat_info.st_mtime),
-                'accessed_at': time.ctime(stat_info.st_atime),
-            })
-    return metadata
 
 def get_entries(path):
     try:
@@ -98,10 +84,12 @@ def print_Table(files_dirs):
                 tmp = "permission denied"
 
             table.add_row(status, onwer, str(file_size), i, tmp)
-    if len(dir_entries) < 60:
-        a  = len(dir_entries)
+
+    if len(files_dirs) < 60:
+        a  = len(files_dirs)
         for i in range(50-a):
-            table.add_row("","","","","-")
+            table.add_row("","","","","")
+
     return table
 
 with console.screen():
@@ -116,34 +104,13 @@ with console.screen():
 
         try:
             global table_entry, cursor_id
+            
             if key.char == "q":
                 return False
-            elif key.char == "a":
-                if cursor_id <= len(dir_entries):
-                    console.clear() 
-                    if cursor_id > len(table_entry.rows)-1:
-                        cursor_id = 0
-                    elif cursor_id > 0:
-                        table_entry.rows[cursor_id-1].style = None
-
-                    table_entry.rows[cursor_id].style = "red"
-    
-                    console.print(table_entry)
-                    cursor_id+=1
-
-            elif key.char == "b":
-                if cursor_id != 1:
-                    console.clear() 
-                    if cursor_id > len(table_entry.rows)-1:
-                        cursor_id = 0
-                    elif cursor_id > 0:
-                        table_entry.rows[cursor_id+1].style = None
-
-                    table_entry.rows[cursor_id].style = "red"
-    
-                    console.print(table_entry)
-                    cursor_id-=1
+                    
         except:
+            logging.info(str(str(key)=="Key.down"))
+            logging.info(str(str(key)=="Key.up"))
             if str(key) == "Key.enter":
                 if cursor_id == 1:
                     console.clear()
@@ -175,7 +142,33 @@ with console.screen():
                     with open(directory+dir_entries[cursor_id-2],"r") as file:
                         for i in range(5):
                            console.print(file.readline())
+
                 else: pass
+            
+            elif str(key) == "Key.down" and cursor_id <= len(dir_entries):
+                console.clear()
+                if cursor_id > len(table_entry.rows)-1:
+                    cursor_id = 0
+                elif cursor_id > 0:
+                    table_entry.rows[cursor_id-1].style = None
+
+                table_entry.rows[cursor_id].style = "red"
+    
+                console.print(table_entry)
+                cursor_id+=1
+
+            elif str(key) == "Key.up"and cursor_id > 1:
+                logging.info(cursor_id)
+                cursor_id-=1
+                console.clear() 
+                if cursor_id > len(table_entry.rows)-1:
+                    cursor_id = 0
+                elif cursor_id > 0:
+                    table_entry.rows[cursor_id].style = None
+
+                table_entry.rows[cursor_id-1].style = "red"
+
+                console.print(table_entry)
 
     listener = keyboard.Listener(on_press=on_key_press)
     listener.start() 
