@@ -1,1 +1,402 @@
 INFO:root://
+INFO:root:/home/yulai/python/
+INFO:root:/home/yulai/python/
+INFO:root:/home/yulai/python/
+INFO:root:/home/yulai/
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 125, in on_key_press
+    table_entry = print_Table(onlydirs)
+                              ^^^^^^^^
+NameError: name 'onlydirs' is not defined
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 130, in on_key_press
+    elif os.path.isdir(directory + onlydirs[cursor_id-2]):
+                                   ^^^^^^^^
+NameError: name 'onlydirs' is not defined
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 146, in on_key_press
+    with open(directory+onlydirs[cursor_id-2],"r") as file:
+                        ^^^^^^^^
+NameError: name 'onlydirs' is not defined
+INFO:root:/home/yulai/projects/python/file_manager/
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 137, in on_key_press
+    directory = directory + onlydirs[cursor_id-2] + "/"
+                            ^^^^^^^^
+NameError: name 'onlydirs' is not defined
+INFO:root:/home/yulai/projects/python/file_manager/
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 140, in on_key_press
+    table1 = print_Table(onlydirs)
+                         ^^^^^^^^
+NameError: name 'onlydirs' is not defined
+INFO:root:/home/yulai/projects/python/file_manager/
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 140, in on_key_press
+    table_entry = print_Table(dir_entries)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 65, in print_Table
+    onwer = path.owner()
+            ^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/pathlib.py", line 1261, in owner
+    return pwd.getpwuid(self.stat().st_uid).pw_name
+                        ^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/yulai/projects/python/file_manager/.git/.git'
+INFO:root:/home/yulai/projects/python/file_manager/
+INFO:root:/home/yulai/projects/python/file_manager/.git/
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 140, in on_key_press
+    table_entry = print_Table(dir_entries)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 65, in print_Table
+    onwer = path.owner()
+            ^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/pathlib.py", line 1261, in owner
+    return pwd.getpwuid(self.stat().st_uid).pw_name
+                        ^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/yulai/projects/python/file_manager/.git/.git'
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 128, in on_key_press
+    table_entry = print_Table(dir_entries)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 65, in print_Table
+    onwer = path.owner()
+            ^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/pathlib.py", line 1261, in owner
+    return pwd.getpwuid(self.stat().st_uid).pw_name
+                        ^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/yulai/projects/python/.git'
+INFO:root:/home/yulai/projects/python/file_manager/
+INFO:root:/home/yulai/projects/python/file_manager/.git/
+INFO:root:/home/yulai/projects/python/file_manager/
+INFO:root:/home/yulai/projects/python/file_manager/.git/
+INFO:root:/home/yulai/projects/python/file_manager/.git/
+INFO:root:/home/yulai/projects/python/file_manager/.git/refs/
+INFO:root:/home/yulai/projects/python/file_manager/.git/refs/
+INFO:root:/home/yulai/projects/python/file_manager/.git/refs/tags/
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 104, in on_key_press
+    if key.char == "a":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 133, in on_key_press
+    elif os.path.isdir(directory + dir_entries[cursor_id-2]):
+                                   ~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: list index out of range
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 108, in on_key_press
+    elif key == keyboard.Key.w:
+                ^^^^^^^^^^^^^^
+AttributeError: type object 'Key' has no attribute 'w'
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 108, in on_key_press
+    elif key == keyboard.Key.w:
+                ^^^^^^^^^^^^^^
+AttributeError: type object 'Key' has no attribute 'w'
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 109, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 136, in on_key_press
+    console.print(table1)
+                  ^^^^^^
+NameError: name 'table1' is not defined. Did you mean: 'Table'?
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 109, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 147, in on_key_press
+    table_entry = print_Table(dir_entries)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 91, in print_Table
+    tmp = magic.from_file(directory + "/" + i, mime=True)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/magic/__init__.py", line 179, in from_file
+    return m.from_file(filename)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/magic/__init__.py", line 112, in from_file
+    with _real_open(filename):
+         ^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '///dev//core'
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 112, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 148, in on_key_press
+    dir_entries = get_entries(directory)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 45, in get_entries
+    all_items = os.listdir(path)
+                ^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '//root/'
+ERROR:pynput.keyboard.Listener:Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 119, in on_key_press
+    if key.char == "q":
+       ^^^^^^^^
+AttributeError: 'Key' object has no attribute 'char'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/xorg.py", line 470, in _handler
+    self._handle(self._display_stop, event)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/keyboard/_xorg.py", line 564, in _handle
+    self.on_press(key)
+  File "/home/yulai/.pyenv/versions/3.12.1/lib/python3.12/site-packages/pynput/_util/__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "/home/yulai/projects/python/file_manager/lscommand.py", line 172, in on_key_press
+    console.print(file.readline())
+                  ^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd8 in position 13: invalid continuation byte

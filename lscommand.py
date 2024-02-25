@@ -1,12 +1,11 @@
 from rich.console import Console
 from rich.table import Table
 import os, stat, magic, math
-from os import listdir
 from os.path import isfile, join
 from pathlib import Path
 from rich.style import Style
 import logging, time
-
+from pynput import keyboard
 logging.basicConfig(filemode="a",filename="log.txt",level=logging.DEBUG)
 
 cursor_id = 0
@@ -22,8 +21,7 @@ def convert_size(size_bytes):
 
 console = Console()
 directory = os.getcwd()+"/"
-onlyfiles = []
-onlydirs = []
+dir_entries = []
 
 def get_folder_size(folder_path):
     metadata = []
@@ -43,13 +41,21 @@ def get_folder_size(folder_path):
             })
     return metadata
 
-def get_stuff_from_dir(path):
-    global onlyfiles, onlydirs
-    onlyfiles = [f for f in listdir(directory) if isfile(join(path, f))]
-    onlydirs = [folder for folder in os.listdir(directory) if os.path.isdir(os.path.join(directory, folder))]
-    onlydirs.extend(onlyfiles)
+def get_entries(path):
+    try:
+        all_items = os.listdir(path)
+    except:
+        all_items = ["permission denied"]
+    
+    get_folders = [i for i in all_items if os.path.isdir(os.path.join(path, i))]
+    get_files = [i for i in all_items if os.path.isfile(os.path.join(path, i))]
+    
+    dir_entries = get_folders + get_files
+    if len(dir_entries) > 60:
+        dir_entries = dir_entries[0:60] 
+    return dir_entries
 
-get_stuff_from_dir(directory)
+dir_entries = get_entries(directory)
 
 def print_Table(files_dirs):
     global directory
@@ -86,83 +92,91 @@ def print_Table(files_dirs):
             file_size = convert_size(file_size)
 
             # get real type
-            tmp = magic.from_file(directory + "/" + i, mime=True)    
+            try:
+                tmp = magic.from_file(directory + "/" + i, mime=True)
+            except:
+                tmp = "permission denied"
 
             table.add_row(status, onwer, str(file_size), i, tmp)
-    
+    if len(dir_entries) < 60:
+        a  = len(dir_entries)
+        for i in range(50-a):
+            table.add_row("","","","","-")
     return table
 
 with console.screen():
-    table1 = print_Table(onlydirs)
-    console.print(table1)
-
-    import threading, time
-    from pynput import keyboard
+    table_entry = print_Table(dir_entries)
+    console.print(table_entry)
 
     def on_key_press(key):
-        global directory, get_stuff_from_dir, onlydirs, print_Table
+        global directory, get_entries, dir_entries, print_Table
+
+        if key == keyboard.Key.esc:
+            return False
+
         try:
-            global table1, cursor_id
-            if key.char == "a":
-                
-                console.clear() 
-                if cursor_id > len(table1.rows)-1:
-                    cursor_id = 0
-                elif cursor_id > 0:
-                    table1.rows[cursor_id-1].style = None
-                if cursor_id == 0:
-                    table1.rows[-1].style = None
+            global table_entry, cursor_id
+            if key.char == "q":
+                return False
+            elif key.char == "a":
+                if cursor_id <= len(dir_entries):
+                    console.clear() 
+                    if cursor_id > len(table_entry.rows)-1:
+                        cursor_id = 0
+                    elif cursor_id > 0:
+                        table_entry.rows[cursor_id-1].style = None
 
-                table1.rows[cursor_id].style = "red"
+                    table_entry.rows[cursor_id].style = "red"
+    
+                    console.print(table_entry)
+                    cursor_id+=1
 
-                console.print(table1)
-                cursor_id+=1
+            elif key.char == "b":
+                if cursor_id != 1:
+                    console.clear() 
+                    if cursor_id > len(table_entry.rows)-1:
+                        cursor_id = 0
+                    elif cursor_id > 0:
+                        table_entry.rows[cursor_id+1].style = None
 
+                    table_entry.rows[cursor_id].style = "red"
+    
+                    console.print(table_entry)
+                    cursor_id-=1
         except:
             if str(key) == "Key.enter":
                 if cursor_id == 1:
                     console.clear()
+
                     directory = "/".join(directory.split("/")[:-1])
                     directory = os.path.split(directory)[0] + "/"
-                    get_stuff_from_dir(directory)
-                    table1 = print_Table(onlydirs)
-                    console.print(table1)
-                                      
+
+                    dir_entries = get_entries(directory)
+
+                    table_entry = print_Table(dir_entries)
+                    console.print(table_entry)
+
                     cursor_id = 0
 
-                elif os.path.isdir(directory + onlydirs[cursor_id-2]):
+                elif os.path.isdir(directory + dir_entries[cursor_id-2]):
                     
                     console.clear()
-                    logging.info(directory)
-                    directory = directory + onlydirs[cursor_id-2] + "/"
-                    
-                    get_stuff_from_dir(directory)
-                    table1 = print_Table(onlydirs)
-                    console.print(table1)
+
+                    directory = directory + dir_entries[cursor_id-2] + "/"
+                    dir_entries = get_entries(directory)
+
+                    table_entry = print_Table(dir_entries)
+
+                    console.print(table_entry)
                     
                     cursor_id = 0
 
-                elif os.path.isfile(directory+onlydirs[cursor_id-2]):
-                    with open(directory+onlydirs[cursor_id-2],"r") as file:
+                elif os.path.isfile(directory+dir_entries[cursor_id-2]):
+                    with open(directory+dir_entries[cursor_id-2],"r") as file:
                         for i in range(5):
                            console.print(file.readline())
                 else: pass
 
-    def background_task():
-        # Simulate some long-running task
-        while True:
-            time.sleep(100)
-
-    with keyboard.Listener(on_press=on_key_press) as listener:
-        # Start the background task in a separate thread
-        thread = threading.Thread(target=background_task)
-        thread.start()
-    
-        # Wait for the thread to finish
-        thread.join()
-
-        # Stop the listener
-        listener.stop()
-        listener.join()
-
-    console.input("Press enter for exit ")
+    listener = keyboard.Listener(on_press=on_key_press)
+    listener.start() 
+    listener.join() 
